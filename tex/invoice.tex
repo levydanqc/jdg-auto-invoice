@@ -1,0 +1,77 @@
+\documentclass[table]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm,top=1cm,right=2cm,bottom=1cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{hhline}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+\usepackage{adjustbox}
+
+\definecolor{yellow}{cmyk}{0,0.19,0.92,0.02}
+
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{tabularx}{\textwidth}{l X r}
+   \hspace{-8pt} \multirow{5}{*}{\includegraphics[height=3cm]{logo.png}} & \\
+   & \textbf{Délégation des Jeux de Génie de l'Université Laval} & \textbf{\Large{INVOICE}} \\
+   & 1045 Avenue de la Médecine & DATE\\
+   & Local 00141 & [DATE]\\
+   & Québec, Quebec G1V 0A6, Canada & DUE\\
+   & +1 418-575-2913 & [DUE]\\
+\end{tabularx} 
+
+\vspace{0.5 cm}
+\begin{center}
+\rule{\textwidth}{0.15em}
+\end{center}
+\vspace{1 cm}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{l X r}
+    \textbf{BILL TO} & & \large{TOTAL}\\
+   \Large{\textbf{[COMPANY]}} & & \Large{[TOTAL] \$}\\
+   \text{[ADDRESS]}  & & \\
+   \large{[NOM]}  & &\\
+   \text{[EMAIL]} & &\\
+   \text{[PHONE]} & &\\
+\end{tabularx} 
+
+\vspace{1 cm}
+
+% \renewcommand{\arraystretch}{2}
+\begin{tabularx}{\linewidth}{X c}
+    \rowcolor{yellow} &\\[0.75ex]
+    \rowcolor{yellow} \huge \bf Service & \huge \bf Montant\\[2.50ex]
+    \hline
+    [PLAN]
+    \hline
+    [ITEMS]
+    &\\
+    \bf \Large \RaggedLeft{TOTAL} & \bf \Large \RaggedLeft{[TOTAL] \$}\\
+    \hhline{==}
+\end{tabularx}
+
+\begin{quote}
+    [DESCRIPTION]
+\end{quote}
+
+\vfill
+
+\begin{quote}
+\textbf{Instruction de paiement}\\
+Net 30 jours, sauf indication contraire.\\
+Veuillez rédiger tous les chèques à l'ordre de "AESGUL (Jeux de Génie 2025)"\\
+Pour toute question concernant cette facture, veuillez contacter Dan Lévy au 418-575-2913 ou partenaires@jdglaval.com\\
+\end{quote}
+
+\end{document}
