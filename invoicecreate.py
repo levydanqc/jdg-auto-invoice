@@ -90,8 +90,12 @@ def getPlanItemsDescription(plan_str, items_str):
     plan_name = plan_str.replace('Partenariat ', '').lower()
     plan = getPlanTex(plan_name)
 
-    items_names = [items_doc[item] for item in items_str.split(', ')]
-    items = getItemsTex(items_names)
+    if items_str != "":
+        items_names = [items_doc[item] for item in items_str.split(', ')]
+        items = getItemsTex(items_names)
+    else:
+        items_names = []
+        items = ""
 
     description = getDescription(plan_name, items_names)
     return [plan, items, description]
