@@ -75,7 +75,7 @@ def getItemsTex(items_names):
 
 def getDescription(plan_name, items_names):
     tex = ""
-    if ("reseautage" in items_names or (plan_name != "Matériel" and plan_name != "Bronze")):
+    if ("reseautage" in items_names or (plan_name != "matériel" and plan_name != "bronze")):
         with open('description/reseautage.tex', 'r') as file:
             tex += file.read()
 
